@@ -27,10 +27,8 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-	// ▁▂▃▄▅▆▇█
 	unsigned int ratio = lround(amount * 8);
-	//printf("%d", ratio);
-	//printf("%f\t%f\t%f\n%d\n", amount, 8. * amount, roundf(8. * amount), ratio);
+	// ▁▂▃▄▅▆▇█
 	printf("%lc", (0x2580 + ratio));
 	return 0;
 }
