@@ -17,8 +17,9 @@ int main(int argc, char *argv[])
 #endif
 #endif
 
-	if (argc != 2) {
-		return 1;
+	if (argc < 2) {
+		//TODO: print help
+		return 0;
 	}
 
 	double amount = atof(argv[1]);
