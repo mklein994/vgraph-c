@@ -24,12 +24,18 @@ int main(int argc, char *argv[])
 
 	double amount = atof(argv[1]);
 
-	if (amount <= 0 || amount > 1) {
+	if (amount < 0 || amount > 1) {
 		return 1;
 	}
 
 	unsigned int ratio = lround(amount * 8);
-	// ▁▂▃▄▅▆▇█
-	printf("%lc", (0x2580 + ratio));
+
+	if (ratio == 0) {
+		printf(" ");
+	} else {
+		// ▁▂▃▄▅▆▇█
+		printf("%lc", (0x2580 + ratio));
+	}
+
 	return 0;
 }
