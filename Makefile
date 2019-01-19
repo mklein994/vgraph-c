@@ -23,7 +23,6 @@ $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
 
 install: $(TARGET)
-	install -d $(DESTDIR)$(PREFIX)/bin/
 	install -m644 vgraph $(DESTDIR)$(PREFIX)/bin/
 
 clean:
