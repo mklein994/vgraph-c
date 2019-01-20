@@ -7,6 +7,10 @@ CFLAGS = -Wall -Wextra -Werror -pedantic
 
 .PHONY: default all clean
 
+ifeq ($(PREFIX),)
+	PREFIX := /usr
+endif
+
 default: clean $(TARGET)
 all: default
 
